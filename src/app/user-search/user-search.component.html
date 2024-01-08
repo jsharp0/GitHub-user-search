@@ -1,0 +1,12 @@
+<div class="searchbox">
+  <div>
+    <img src="assets/icon-search.svg" />
+    <input
+      [(ngModel)]="searchValue"
+      type="text"
+      placeholder="Search GitHub username…"
+    />
+  </div>
+  <span class="error" *ngIf="user()?.error">No results</span>
+  <button (click)="onSearch()">Search</button>
+</div>
